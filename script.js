@@ -21,17 +21,15 @@ function addToCart(name, price) {
     total += price;
     totalEl.textContent = "$ " + total.toFixed(2);
 
-    if (window.innerWidth > 768) {
-        let item = document.createElement("div");
-        item.classList.add("list");
-        item.id = name;
-        item.innerHTML = `
-            <p>${name}</p>
-            <span>$${price}</span>
-            <button onclick="removeFromCart('${name}', ${price})">X</button>`;
-        let totalDiv = document.querySelector(".total");
-        cartList.insertBefore(item, totalDiv);
-    }
+    let item = document.createElement("div");
+    item.classList.add("list");
+    item.id = name;
+    item.innerHTML = `
+        <p>${name}</p>
+        <span>$${price}</span>
+        <button onclick="removeFromCart('${name}', ${price})">X</button>`;
+    let totalDiv = document.querySelector(".total");
+    cartList.insertBefore(item, totalDiv);
 }
 
 function removeFromCart(name, price) {
@@ -41,9 +39,6 @@ function removeFromCart(name, price) {
     }
     total -= price;
     totalEl.textContent = "$ " + total.toFixed(2);
-
-    if (window.innerWidth > 768) {
-        document.getElementById(name).remove();
-    }
+    document.getElementById(name).remove(); 
 }
 
