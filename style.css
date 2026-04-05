@@ -65,7 +65,9 @@ body{
     top: 8px;
     right:10px;
     border-radius: 10px;
+    overflow: hidden;
 }
+
 .total h3{
     position: absolute;
     bottom: 50px;
@@ -135,11 +137,13 @@ body{
         position: fixed;
         bottom: 0px;
         top: auto;
-        right: 4%;
-        width: 90%;
-        height: 150px;
+        right: 0px;
+        width: 98%;
+        height: 200px;
         border-radius: 10px 10px 0px 0px;
-        background-color: white;
+        background-color: rgb(255, 255, 255);
+        overflow-y: auto; 
+        margin-bottom: 80px;
     }
     .head h1{
         font-size: 15px;
@@ -159,4 +163,16 @@ body{
     .remove{
         display: block;
     }
+    .checkout{
+        position: fixed;
+        width: 100%;
+    }
+    .total{
+        position: fixed;
+        bottom: 20px;
+        background-color: white;
+        width: 100%;
+        border-top:3px solid black ;
+    }
 }
+
